@@ -55,8 +55,8 @@
                 <div class="col-12 col-sm align-self-center justify-content-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
-                <div class="col-12 col-sm align-self-center">
-                    <a class="btn btn-warning" href="#reserve">Reserve Table</a>
+                <div class="col-12 col-sm align-self-center mt-1">
+                    <a class="btn btn-warning" href="#ReserveTable">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -125,50 +125,55 @@
 
             </div>
         </div>
-        <div class="row row-content">
+        <div class="row row-content"  id="ReserveTable">
             <div class="col-12 col-sm-8 mx-auto">
                 <div class="card">
                     <div class="card-header bg-warning">
                         Reserve Seat
                     </div>
-                    <form class="card-body form-horizontal">
-                        <div class="row">
-                            <div class="col-12 col-sm-2">Number of Guests</div>
-                            <div class="col-12 col-sm-10">
-                                <span class="mr-4">
-                                    <input id="s1" type="radio" name="seats">
-                                    <label for="s1" class="radio-inline ">1</label>
-                                </span>
-                                <span class="mr-4">
-                                    <input id="s2" type="radio" name="seats">
-                                    <label for="s2" class="radio-inline ">2</label>
-                                </span class="mr-2">
-                                <span class="mr-4">
-                                    <input id="s3" type="radio" name="seats">
-                                    <label for="s3" class="radio-inline ">3</label>
-                                </span>
-                                <span class="mr-4">
-                                    <input id="s4" type="radio" name="seats">
-                                    <label for="s4" class="radio-inline ">4</label>
-                                </span>
-                                <span class="mr-4">
-                                    <input id="s5" type="radio" name="seats">
-                                    <label for="s5" class="radio-inline ">5</label>
-                                </span>
-                                <span class="mr-4">
-                                    <input id="s6" type="radio" name="seats">
-                                    <label for="s6" class="radio-inline ">6</label>
-                                </span>
+                    <form class="card-body">
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-2" for="seatSelection">Number of Seats</label>
+                            <div class="col-12 col-sm-10" id="seatSelection">
+                            <div  class="form-check form-check-inline">
+                                <input class="form-check-input" id="seats" type="radio" name="seats" value="1">
+                                <label class="form-check-label" for="seats">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="seats" type="radio" name="seats" value="2">
+                                <label class="form-check-label" for="seats">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="seats" type="radio" name="seats" value="3">
+                                <label class="form-check-label" for="seats">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="seats" type="radio" name="seats" value="4">
+                                <label class="form-check-label" for="seats">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="seats" type="radio" name="seats" value="5">
+                                <label class="form-check-label" for="seats">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="seats" type="radio" name="seats" value="6">
+                                <label class="form-check-label" for="seats">6</label>
                             </div>
                         </div>
-                        <div class="row mt-5">
-                            <div class="col-12 col-sm-2">Date and Time</div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 col-sm-2">
+                                Date and Time
+                            </div>
                             <div class="col-12 col-sm-10">
-                                <div class="form-group">
-                                    <input name="date" id="date" placeholder="Date" type="date">
-                                    <input name="time" id="time" placeholder="time" type="time">
+                                <div >
+                                    <input class="col-12 col-sm-auto mt-2" type="date" name="date" id="date">
+                                    <input class="col-12 col-sm-auto mt-2" type="time" name="time" id="time">
                                 </div>
                             </div>
+                        </div>
+                        <div class="row col-12">
+                            <button class="offset-sm-2 btn btn-primary" type="submit">Reserve</button>
                         </div>
                     </form>
                 </div>
