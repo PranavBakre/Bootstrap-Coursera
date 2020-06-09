@@ -7,15 +7,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <!--Font Awesome CSS-->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <!--Bootstrap Social-->
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <!--Custom CSS-->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
 </head>
 
 <body>
@@ -42,7 +40,7 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-target="#loginModal" data-toggle="modal">
+                    <a id="login" href="#loginModal">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -63,28 +61,28 @@
                         <label class="col-12 col-sm-3" for="seatSelection">Number of Seats</label>
                         <div class="col-12 col-sm-9" id="seatSelection">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="seats" type="radio" name="seats" value="1">
-                                <label class="form-check-label" for="seats">1</label>
+                                <input class="form-check-input" id="seats1" type="radio" name="seats" value="1">
+                                <label class="form-check-label" for="seats1">1</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="seats" type="radio" name="seats" value="2">
-                                <label class="form-check-label" for="seats">2</label>
+                                <input class="form-check-input" id="seats2" type="radio" name="seats" value="2">
+                                <label class="form-check-label" for="seats2">2</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="seats" type="radio" name="seats" value="3">
-                                <label class="form-check-label" for="seats">3</label>
+                                <input class="form-check-input" id="seats3" type="radio" name="seats" value="3">
+                                <label class="form-check-label" for="seats3">3</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="seats" type="radio" name="seats" value="4">
-                                <label class="form-check-label" for="seats">4</label>
+                                <input class="form-check-input" id="seats4" type="radio" name="seats" value="4">
+                                <label class="form-check-label" for="seats4">4</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="seats" type="radio" name="seats" value="5">
-                                <label class="form-check-label" for="seats">5</label>
+                                <input class="form-check-input" id="seats5" type="radio" name="seats" value="5">
+                                <label class="form-check-label" for="seats5">5</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="seats" type="radio" name="seats" value="6">
-                                <label class="form-check-label" for="seats">6</label>
+                                <input class="form-check-input" id="seats6" type="radio" name="seats" value="6">
+                                <label class="form-check-label" for="seats6">6</label>
                             </div>
                         </div>
                     </div>
@@ -176,7 +174,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center mt-1">
-                    <a class="btn btn-warning" data-toggle="modal" href="#ReserveTable">Reserve
+                    <a id="Reserve" class="btn btn-warning" href="#ReserveTable">Reserve
                         Table</a>
                 </div>
             </div>
@@ -357,28 +355,13 @@
         </div>
     </footer>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(() => {
-            $('#carousel').carousel({interval:2000});
-            $('#carousel-button').click(() => {
-                if ($('#carousel-button').children('span').hasClass('fa-pause')) {
-                    $('#carousel-button').children('span').removeClass('fa-pause');
-                    $('#carousel-button').children('span').addClass('fa-play');
-                    $('#carousel').carousel('pause');
-                }
-                else {
-                    $('#carousel-button').children('span').removeClass('fa-play');
-                    $('#carousel-button').children('span').addClass('fa-pause');
-                    $('#carousel').carousel('cycle')
-                }
-                
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+
 </body>
 
 </html>
